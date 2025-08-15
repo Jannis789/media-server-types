@@ -2,7 +2,7 @@
 // POST -> /Translation/:language_code
 interface GetTranslationsResponse {
     status: number;
-    message: string;
+    messages: string[];
     data?: {
         key: string;
         value: string;

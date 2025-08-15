@@ -1,7 +1,7 @@
 // POST -> /User/registration
 interface CreateUserResponse {
     status: number;
-    message: string;
+    messages: string[];
     data?: {
         session: string;
         expiresAt: Date;
@@ -11,7 +11,7 @@ interface CreateUserResponse {
 // POST -> /User/login
 interface LoginUserResponse {
     status: number;
-    message: string;
+    messages: string[];
     data?: {
         session: string;
         expiresAt: Date;
