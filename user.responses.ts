@@ -11,3 +11,8 @@ export type LoginUserResponse = GenericResponse<{
     session: string;
     expiresAt: Date;
 }>;
+
+export enum UserResponsePaths {
+    CreateUser = "/User/register",
+    LoginUser = "/User/login",
+}
