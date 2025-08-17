@@ -21,4 +21,12 @@ type ApiResponseError = ApiResponseBase & {
   };
 };
 
+export type Success<T extends GenericResponse<any>> = T extends ApiResponseSuccess<infer U>
+  ? ApiResponseSuccess<U>
+  : never;
+
+export type Failure<T extends GenericResponse<any>> = T extends ApiResponseError
+  ? ApiResponseError
+  : ApiResponseError; 
+
 export type GenericResponse<T> = ApiResponseSuccess<T> | ApiResponseError;
