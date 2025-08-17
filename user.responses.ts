@@ -1,6 +1,5 @@
 import { GenericResponse } from "./basic.response.types";
 
-
 export type CreateUserResponse = GenericResponse<{
     session: string;
     role: string;
